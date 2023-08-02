@@ -1,0 +1,22 @@
+
+.main {
+  overflow: hidden;
+}
+
+.main div {
+  transition: all ease-in 1s;
+}
+
+.main .card:first-child {
+  transform: translateY(-150%);
+  opacity: 0;
+}
+
+.main .card:last-child {
+  transform: translateX(-150%);
+  opacity: 0;
+}
+.slide-in {
+  transform: translateX(0);
+  opacity: 1;
+}
