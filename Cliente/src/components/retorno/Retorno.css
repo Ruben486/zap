@@ -1,0 +1,31 @@
+
+.r-navbar {
+  padding: 1rem;
+  width: 3rem;
+  height: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  border: 1px solid rgb(190, 189, 189);
+  border-radius: 10px;
+}
+.r-navbar  li {
+  list-style-type: none;
+  color: black;
+}
+.r-navbar  a {
+  text-decoration: none;
+  color: black;
+}  
+
+.r-navbar a:hover {
+  color: var(--color-gra-1)
+}
+.flecha-arriba:hover, .flecha-abajo:hover {
+  cursor: pointer;
+  color: var(--color-gra-2)
+}

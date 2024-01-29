@@ -1,0 +1,16 @@
+.cabeza-detalle { 
+    background: var(--bg-principal);
+    color: #c2bebe;
+    position: sticky;
+    top: 0;
+    margin-bottom: 40px;
+  }
+
+  .cabeza-titulo {
+    font-weight: bold;
+    font-size: 40px;
+    background: var(--gradiente-titulo);
+    background-clip: text;
+    -webkit-background-clop: text;
+    -webkit-text-fill-color: transparent;
+  }

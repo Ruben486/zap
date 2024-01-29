@@ -1,0 +1,32 @@
+.nav-bar {
+    /* background-color: #092735; */
+    background: var(--bg-principal);
+    color: white;
+  }
+  .navbrand {
+    color: white;
+    font-size: 30px;
+  }
+  .navbrand:hover {
+    color: orange;
+    border-radius: 20px;
+  }
+  
+  .nav-bar .nav-link {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    margin-left: 20px;
+  }
+  
+  .nav-bar .nav-link:hover {
+    color: white;
+    background-color: orange;
+    border-radius: 8px;
+  }
+  .top-box {
+    background: rgba(0, 40, 83, 1);
+    display:flex;
+    justify-content: space-around;
+  }
+  

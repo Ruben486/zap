@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --font-family: "Poppins", sans-serif;
+  --font-family-serif: "Lora", serif;
+  --font-family-sec: "Montserrat", sans-serif;
+  --color-gra-1: #d838b0;
+  --color-gra-2: #ec8c0d;
+  --gradiente-titulo: linear-gradient(89.97deg, #d838b0 5%, #ec8c0d 105%);
+  --gradient-text: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+  --gradient-bar: linear-gradient(103.22deg, #ae67fa -13.86%, #f49867 99.55%);
+  --grdte-tit-lista: linear-gradient(to right, #acf3f8, #142449);
+  --gradiente-card: linear-gradient(#7d9ef8, #aeeeee);
+  --back-titulo: #373b44; /* fallback for old browsers */
+  --color-gradient-1: rgb(137, 226, 233);
+  --color-gradient-2: rgb(4, 35, 102);
+  --color-bg: #040c18;
+  --color-bg-claro: #e3f2fd;
+  --bg-principal: #002853;
+  --bg-btn-sec: #72757c;
+  --bg-pagina: #f2f2f2;
+  --bg-claro: #f8f9fa;
+  --color-footer: #031b34;
+  --bg-btn-hover: #ff8a71;
+  --color-blog: #042c54;
+  --color-text: #81afdd;
+  --color-subtext: #ff8a71;
+  --color-letra-boton: #c2bebe;
+  --font-size-large: 40px;
+  --font-size-medium: 24px;
+  --font-size-small: 16px;
+  --tiza:rgb(153, 148, 148);
+}
+
+body {
+  font-family: "Poppins", "Montserrat", sans-serif;
+  font-weight: 300;
+  /*background: #faf8f8;      */
+  /*background: #f5f5f5;      */
+  background: var(--bg-pagina);
+  font-size: 16px;
+}
+
+.bg-gradiente {
+  /* background: linear-gradient(to bottom,#e0e0e0, #b0f1f3);  */
+  /* ff 3.6+ */
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(212, 180, 212, 0.96) 0%,
+    rgba(143, 206, 218, 0.98) 97%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(212, 180, 212, 0.96) 0%,
+    rgba(143, 206, 218, 0.98) 97%
+  );
+
+  /* opera 11.10+ */
+  background: -o-linear-gradient(
+    90deg,
+    rgba(212, 180, 212, 0.96) 0%,
+    rgba(143, 206, 218, 0.98) 97%
+  );
+
+  /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8FCEDA', endColorstr='#D4B4D4', GradientType=0 );
+
+  /* ie 10+ */
+  background: -ms-linear-gradient(
+    90deg,
+    rgba(212, 180, 212, 0.96) 0%,
+    rgba(143, 206, 218, 0.98) 97%
+  );
+
+  /* global 94%+ browsers support */
+  background: linear-gradient(
+    90deg,
+    rgba(212, 180, 212, 0.96) 0%,
+    rgba(143, 206, 218, 0.98) 97%
+  );
+}
+
+.g-button {
+  padding: 9px 14px;
+  font-size: 20px;
+  border-radius: 10px;
+}

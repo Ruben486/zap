@@ -1,0 +1,38 @@
+.bg-gradiente {
+  /* background: linear-gradient(to bottom,#e0e0e0, #b0f1f3);  */
+  /* ff 3.6+ */
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(212, 180, 212, 0.96) 0%,
+    rgba(143, 206, 218, 0.98) 97%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(212, 180, 212, 0.96) 0%,
+    rgba(143, 206, 218, 0.98) 97%
+  );
+
+  /* opera 11.10+ */
+  background: -o-linear-gradient(
+    90deg,
+    rgba(212, 180, 212, 0.96) 0%,
+    rgba(143, 206, 218, 0.98) 97%
+  );
+
+  background: -ms-linear-gradient(
+    90deg,
+    rgba(212, 180, 212, 0.96) 0%,
+    rgba(143, 206, 218, 0.98) 97%
+  );
+
+  /* global 94%+ browsers support */
+  background: linear-gradient(
+    90deg,
+    rgba(212, 180, 212, 0.96) 0%,
+    rgba(143, 206, 218, 0.98) 97%
+  );
+}
+/* navbar y sus componentes */
+

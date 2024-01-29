@@ -43,6 +43,7 @@ function LoginPage() {
             type="email"
             name="email"
             placeholder="tucorreo@dominio.com"
+            autoFocus
             {...register("email", { required: true })}
           />
           <MensajeError error={errors.email?.message} />

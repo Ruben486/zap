@@ -1,0 +1,89 @@
+.contacto {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+  font-family: 'Liberation Sans', sans-serif;
+}
+
+.box-contacto {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.c-navegacion {
+  width: 3.5rem;
+}
+.c-izq-side {
+  width: 35rem;
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center ;
+  text-align: start;
+}
+.c-titulo {
+  align-self: center;
+  margin-top: 5px;
+  font-family: 'Liberation Sans'; 
+  font-weight: 400;
+  font-size: 2rem;
+  background: var(--gradiente-titulo); 
+  background-clip: text;
+  -webkit-background-clop: text;
+  -webkit-text-fill-color: transparent;
+}
+.c-imagen {
+  width: 140px;
+  height: 140px;
+  border-radius: 60%;
+  padding: 5px;
+  border: 3px solid var(--color-gra-1);
+  box-shadow: 10px 0px 20px 7px rgba(0,0,0,0.3);
+  transition: all ease-in-out 0.8s;
+}
+
+.c-imagen:hover{
+    transform: rotate(180deg);
+    transition: all ease-in-out 0.8s;
+}
+
+.c-der-side {
+  width: 35rem;
+  border: 1px solid rgb(221, 210, 210);
+  padding: 1rem;
+  border-radius: 2rem;
+  box-shadow: 12px 12px 23px 7px rgba(0,0,0,0.3);
+}
+form {
+  background: whitesmoke;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 5px;
+}
+.form-control {
+  width: 100%;
+}
+
+.form-control:focus {
+  color: var(--color-gra-1) ;
+} 
+
+.c-button {
+  background: var(--bg-principal);
+  color: white;
+  transition: all ease-in-out 0.2s;
+  border: none;
+}
+
+.c-button:hover {
+  background: var(--bg-btn-hover);
+  border-radius: 12px;
+  transition: all ease-in-out 0.2s;
+}
+.pieform {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

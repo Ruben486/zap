@@ -1,0 +1,42 @@
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Liberation Sans";
+  font-size: 1rem;
+  color: var(--tiza);
+  width: 100%;
+  height: 50vh;
+  background-image: url("/img/wave.svg");
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-size: cover;
+}
+
+.f-contenido {
+  /* position: absolute;
+  top: 8rem; */
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items:start;
+  width: 100%;
+  height: auto;
+}
+.d-panel *:hover {
+  color: var(--color-gra-1);
+  cursor: pointer;
+}
+.developer:hover {
+  color:#ec8c0d;
+  cursor: pointer;
+}
+.footer a, Link {
+  text-decoration: none;
+  color: var(--tiza);
+} 
+.footer a:visited {
+  color: var(--tiza);
+}

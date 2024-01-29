@@ -1,0 +1,20 @@
+.boton-cerrar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: 0.5s ease all;
+  border-radius: 8px;
+  color: #1766dc;
+  padding: 10px;
+  text-align: center;
+}
+
+.boton-cerrar:hover {
+  background: rgb(236, 66, 66);
+  color: whitesmoke;
+}

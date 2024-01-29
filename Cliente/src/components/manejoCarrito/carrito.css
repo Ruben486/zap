@@ -1,0 +1,16 @@
+.lienzo-carrito {
+padding-bottom: 40px;
+  
+}
+.caja-externa {
+  max-width: 800px;
+  border-radius: 10px;
+  padding: 10px; 
+}
+.detalle-car-precio {
+  padding: 10px;
+  color: var(--color-gra-1);
+  font-weight: bold;
+  text-align: end;
+}
+

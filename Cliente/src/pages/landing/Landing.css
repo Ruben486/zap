@@ -1,0 +1,13 @@
+.cuerpo-landing {
+ color: var(--bg-claro);
+}
+.caja-central {
+    display: flex;
+    gap: 1rem; 
+}
+.m-retorno {
+    position: sticky;
+    width: 6rem;
+    height: 6rem;
+    top: 20px;
+  }

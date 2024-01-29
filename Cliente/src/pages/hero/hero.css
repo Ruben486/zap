@@ -1,0 +1,25 @@
+/* hero container */
+.hero-container {
+    /* background: linear-gradient(#aeeeee, #7d9ef8); */
+    background: rgb(214, 224, 230);
+    -webkit-box-shadow: 28px 37px 50px -6px rgb(166, 203, 218);
+    -moz-box-shadow: 28px 37px 50px -6px rgba(138, 143, 145, 1);
+    box-shadow: 28px 28px 30px -6px rgba(138, 143, 145, 1);
+    
+  }
+  
+  .titulo-hero {
+    font-family: var(--font-family-sec);
+    background: var(--gradiente-titulo);
+    background-clip: text;
+    -webkit-background-clop: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /*carrousel */
+  .img-carousel-item {
+    max-height: 500px;
+    object-fit: cover;
+    object-position: bottom;
+  }
+  

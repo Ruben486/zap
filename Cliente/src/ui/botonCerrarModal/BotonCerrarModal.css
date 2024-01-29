@@ -1,0 +1,20 @@
+.boton {
+  display: block;
+  width: 6rem;
+  height: 3rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  /* background: #1766dc; */
+  background: rgb(4, 35, 102);
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  transition: 0.3s ease all;
+}
+.boton:hover {
+  /* background: rgb(4, 35, 102); */
+  background: var(--color-subtext);
+  color: black
+}

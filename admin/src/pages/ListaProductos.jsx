@@ -8,13 +8,9 @@ const ListaProductos = () => {
     queryFn: listaProductos,
   });
   
-  /* const paginaProductos = axios.get('http://localhost:4000/api/productos')
-  .then(response => console.log(response.data.docs))
- */
   return (
-
     <div>ListaProductos</div>
   )
 }
 
-export default ListaProductos
+export default ListaProductos;

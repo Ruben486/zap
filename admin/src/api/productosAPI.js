@@ -12,6 +12,7 @@ export const getProductos = async () => {
 
 export const getProducto = async (id) => {
   const resultado = await productosAPI.get('/productos/'+id)
+
   return resultado;
 };
 

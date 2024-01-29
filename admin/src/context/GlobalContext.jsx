@@ -10,8 +10,10 @@ export const useGlobal= () => {
 export const GlobalProvider = ({children}) => {
     const [modal, setModal] = useState(false)
     const [bajaProducto, setBajaProducto] = useState(false)
+    const [vistaZap, setVistaZap] = useState('tabla')
+    const [vistaUsu, setVistaUsu] = useState('tabla')
     return (
-        <GlobalContext.Provider value={{modal, setModal, bajaProducto,setBajaProducto}}>
+        <GlobalContext.Provider value={{modal, setModal, bajaProducto,setBajaProducto,vistaZap, setVistaZap,vistaUsu,setVistaUsu}}>
             {children}
         </GlobalContext.Provider>
     )

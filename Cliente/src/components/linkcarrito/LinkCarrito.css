@@ -1,0 +1,35 @@
+/* trabajo sobre el carrito */
+.div-carrito {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  top: 3px;
+  right: 10px;
+  transition: color ease-in-out 0.5s;
+  z-index: 20;
+}
+.link-carrito {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: start;
+  padding: 5px;
+  font-size: 40px;
+  line-height: 1rem;
+  transition: color ease-in-out 0.2s;
+}
+.cant-items-carrito {
+  position: absolute;
+  top: 1px;
+  right: 8px;
+  font-size: 20px;
+  font-weight: 800;
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  padding: 3px;
+}
