@@ -3,22 +3,32 @@ import { CartGlobalContext } from "../../cartContext/GlobalContext";
 import CardZapCarrito from "./CardZapCarrito";
 import FormCompra from "../FormCompra/FormCompra";
 import CabezaPage from "../cabeza-page/CabezaPage";
+import { themeContext } from "../../contextoTema/ContextoTema";
 import "./carrito.css";
 
 function DetalleCarrito() {
   const { cart, resetCart, totalCart, sumarCart } =
     useContext(CartGlobalContext);
 
+  const tema   = useContext(themeContext);
+  const darkMode = tema.state.darkMode;
+  const fondo  = tema.state.fondo;
+  const color  = tema.state.color; 
+  const lienzo = darkMode ? tema.state.lienzo : 'var(--bg-cielo)';
+  
   useEffect(() => {
     sumarCart();
   }, [cart]);
 
   return (
-    <div className="lienzo-carrito" style={{ background: "#e0f7fa" }}>
+    <div className="lienzo-carrito"
+     style={{ background: lienzo }}
+     >
       <CabezaPage titulo={"Detalle del carrito"} />
       <div
         className="container caja-externa d-flex justify-content-center 
-      align-items-center flex-column bg-light shadow" 
+      align-items-center flex-column shadow" 
+      style={{ background: fondo}}
       >
         {cart?.map((producto) => (
           <CardZapCarrito key={producto._id} producto={producto} />
@@ -26,9 +36,8 @@ function DetalleCarrito() {
 
         {cart.length > 0 ? (
           <>
-            <div
-              className="fs-3 text-end p-3 display-6 rounded"
-              style={{ width: "100%" }}
+            <div className="fs-3 text-center p-3 display-6 rounded w-100"
+              style={{color:color}}
             >
               Total de carrito: $<span> </span>
               <span
@@ -50,7 +59,9 @@ function DetalleCarrito() {
             </section>
           </>
         ) : (
-          <div className="mensaje-vacio text-center display-4">
+          <div className="mensaje-vacio text-center display-4"
+          style={{color:color}}
+          >
             El carrito está vacío
           </div>
         )}

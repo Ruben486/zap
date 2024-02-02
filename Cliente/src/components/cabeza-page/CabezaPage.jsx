@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Logo from "../../ui/logo";
-import { GoHome } from "react-icons/go";
 import "./CabezaPage.css";
+import { Home } from "../../ui/reactIcons/ReactIcons";
 
 const CabezaPage = ({titulo}) => {
   return (
@@ -11,7 +11,7 @@ const CabezaPage = ({titulo}) => {
       <Link className="boton-retorno" to="/">
         <span>
           {" "}
-          <GoHome />
+          <Home />
         </span>{" "}
         Retorno a Inicio
       </Link>

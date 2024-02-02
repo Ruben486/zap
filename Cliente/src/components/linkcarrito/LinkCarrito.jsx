@@ -4,20 +4,22 @@ import { CartGlobalContext } from "../../cartContext/GlobalContext";
 import { Link } from "react-router-dom";
 import constantes from "../../constantes/constantes";
 import "./LinkCarrito.css";
-
+import { themeContext } from "../../contextoTema/ContextoTema";
 
 const LinkCarrito = () => {
   const { cart } = useContext(CartGlobalContext);
+  const tema = useContext(themeContext);
+  const darkMode = tema.state.darkMode;
   const [scrollPosition, setScrollPosition] = useState(0);
   const [back, setBack] = useState(constantes.backDarkCarrito);
   const [colorIconCarrito, setColorIconCarrito] = useState(constantes.colorIconDarkCarrito);
-
+  
   const handleScroll = () => {
     const position = window.scrollY;
     setScrollPosition(position);
-    if (position > 202) {
-       setBack(constantes.backlightCarrito)
-       setColorIconCarrito(constantes.colorIconlightCarrito)
+    if (position > 202 && !darkMode) {
+        setBack(constantes.backlightCarrito)
+        setColorIconCarrito(constantes.colorIconlightCarrito)
     } else {
        setBack(constantes.backDarkCarrito)
        setColorIconCarrito(constantes.colorIconDarkCarrito)
@@ -30,7 +32,8 @@ const LinkCarrito = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [darkMode]);
+  
   return (
     <>
       <div className={`div-carrito float-end shadow rounded-circle m-2 px-2 ${back}`} >

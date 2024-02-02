@@ -4,34 +4,62 @@ import { SlSocialLinkedin } from "react-icons/sl";
 import { SlGlobe } from "react-icons/sl";
 import { SlBulb } from "react-icons/sl";
 import { SlPhone } from "react-icons/sl";
+import { SiMoonrepo } from "react-icons/si";
+import { FiSun } from "react-icons/fi";
+import { BsFillEyeFill } from "react-icons/bs";
+import { BsHandThumbsUp } from "react-icons/bs";
+import { FcLike } from "react-icons/fc";
+import { BsTrash3 } from "react-icons/bs";
+import { GoHome } from "react-icons/go";
 
 export const Correo = () => {
-  return (
-    <SlEnvolope />
-  )
-}
+  return <SlEnvolope />;
+};
 export const Localidad = () => {
-    return (
-        <SlLocationPin />
-    )
-}; 
+  return <SlLocationPin />;
+};
 export const Linkedin = () => {
-    return (
-        <SlSocialLinkedin />
-    )
+  return <SlSocialLinkedin />;
 };
 export const Globo = () => {
-    return (
-        <SlGlobe />
-    )
+  return <SlGlobe />;
 };
 export const Foco = () => {
-    return (
-        <SlBulb />
-    )
+  return <SlBulb />;
 };
 export const Telefono = () => {
+  return <SlPhone />;
+};
+
+export const Luna = () => {
+  return <SiMoonrepo />;
+};
+export const Sol = () => {
     return (
-        <SlPhone />
+        <FiSun />    
     )
 };
+export const Ojo  = () => {
+  return (
+    <BsFillEyeFill />
+  )
+};
+export const Like = () => {
+  return (
+    <BsHandThumbsUp />
+  )
+};
+export const Corazon = () => {
+  return (
+    <FcLike />
+  )
+};
+export const TachoBasura = () => {
+  return (
+    <BsTrash3 />
+  )
+};
+export const Home = () => {
+  return ( <GoHome />)
+} 
+

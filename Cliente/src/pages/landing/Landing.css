@@ -1,6 +1,3 @@
-.cuerpo-landing {
- color: var(--bg-claro);
-}
 .caja-central {
     display: flex;
     gap: 1rem; 

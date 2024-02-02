@@ -4,7 +4,6 @@ import { useGetProductosQuery } from "../../api/zapApi";
 import CardZap from "../cardZaps/CardZap";
 import { Toaster } from "react-hot-toast";
 import "./productosList.css";
-import NavRetorno from "../retorno/NavRetorno";
 import SpinnerBorder from "../../ui/spinner/SpinnerBorder";
 
 function ProductList() {

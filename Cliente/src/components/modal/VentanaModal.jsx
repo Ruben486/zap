@@ -1,5 +1,6 @@
-import { CartGlobalContext } from "../../cartContext/GlobalContext";
 import { useContext } from "react";
+import { CartGlobalContext } from "../../cartContext/GlobalContext";
+import { themeContext } from "../../contextoTema/ContextoTema";
 import BotonCerrar from "../BotonCerrar/BotonCerrar";
 import constantes from "../../constantes/constantes";
 import "./ventanaModal.css";
@@ -12,34 +13,25 @@ const VentanaModal = ({
   paddingModal,
 }) => {
   const { modal } = useContext(CartGlobalContext);
+  const tema = useContext(themeContext);
+  const darkMode = tema.state.darkMode;
   return (
     <>
       {
         modal && (
           <div className="overlay">
-            <div className="contenedor-modal">
+            <div className= {`contenedor-modal ${darkMode ? 'variante-oscura' : 'variante-clara'}`} 
+            >
               {mostrarHeader && (
                 <div className="encabezado-modal">
                   <h3>{constantes.tituloModal}</h3>
                 </div>
               )}
-
               {children}
               <BotonCerrar />
             </div>
           </div>
         )
-        // <Overlay mostrarOverlay={mostrarOverlay} posicionModal={posicionModal}>
-        //   <ContenedorModal paddingModal={paddingModal}>
-        //     {mostrarHeader && (
-        //       <EncabezadoModal>
-        //         <h3>{titulo}</h3>
-        //       </EncabezadoModal>
-        //     )}
-        //     <BotonCerrar />
-        //     {children}
-        //   </ContenedorModal>
-        // </Overlay>
       }
     </>
   );

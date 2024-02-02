@@ -2,12 +2,15 @@ import { useContext } from "react";
 import { useAltaOrderMutation } from "../../api/OrderApi";
 import { Navigate, redirect, useNavigate } from "react-router-dom";
 import { CartGlobalContext } from "../../cartContext/GlobalContext";
+import { themeContext } from "../../contextoTema/ContextoTema";
 
 const FormCompra = () => {
   const { cart, modal, totalCart, resetCart, activarModal } =
     useContext(CartGlobalContext);
   const [altaOrder, { error }] = useAltaOrderMutation();
   const navegar = useNavigate();
+  const tema = useContext(themeContext);
+  const color = tema.state.color;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -39,11 +42,14 @@ const FormCompra = () => {
     <div className="container">
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
-          <label className="form-label" htmlFor="floatingNombre">
+          <label className="form-label" htmlFor="floatingNombre" 
+          style={{color: color}}
+          >
             Nombre y Apellido:
           </label>
           <input
             className="form-control"
+            style={{color: color}}
             type="string"
             name="nomyAp"
             placeholder="Nombre y Apellido"
@@ -52,11 +58,14 @@ const FormCompra = () => {
           />
         </div>
         <div className="mb-3">
-          <label className="form-label" htmlFor="floatingDomicilio">
+          <label className="form-label" htmlFor="floatingDomicilio"
+          style={{color:color}}
+          >
             Domicilio completo:{" "}
           </label>
           <textarea
             className="form-control"
+            style={{color:color}}
             type="string"
             name="domicilio"
             id="floatingDomicilio"
@@ -65,20 +74,23 @@ const FormCompra = () => {
           ></textarea>
         </div>
         <div className="mb-3">
-          <label htmlFor="FloatingCorreo" className="form-label">
+          <label htmlFor="FloatingCorreo" className="form-label"
+          style={{color:color}}
+          >
             Email
           </label>
           <input
             type="email"
             name="correo"
             className="form-control"
+            style={{color:color}}
             required
             placeholder="tucorreo@ejemplo.com"
             id="floatingCorreo"
           />
         </div>
 
-        <p>
+        <p style={{color:color}}>
           El pago se realiza por medio de transferencia bancaria a nombre de
           empresa SA. <br />
           Se envia la mercadería al domicilio consignado hasta 24 hs luego de

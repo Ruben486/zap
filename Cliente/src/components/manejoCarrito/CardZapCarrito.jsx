@@ -1,9 +1,13 @@
 import { useContext } from "react";
 import { CartGlobalContext } from "../../cartContext/GlobalContext";
-import { BsTrash3 } from "react-icons/bs";
+import { TachoBasura } from "../../ui/reactIcons/ReactIcons";
+import { themeContext } from "../../contextoTema/ContextoTema";
 import "./carrito.css";
 
 function CardZapCarrito({ producto }) {
+  const tema =  useContext(themeContext);
+  const color = tema.state.color;
+  console.log(color)
   const { deleteProducto } = useContext(CartGlobalContext);
   return (
     <div className="m-3 shadow rounded" style={{ width: "100%" }}>
@@ -21,9 +25,9 @@ function CardZapCarrito({ producto }) {
         </div>
         <div className="col">
           <div className="p-2">
-            <h5 className="">{producto.titulo}</h5>
-            <p className="">{producto.descripcion}</p>
-            <p>Talle: {producto.talle}</p>
+            <h5 style={{color: color}}>{producto.titulo}</h5>
+            <p style={{color: color}}>{producto.descripcion}</p>
+            <p style={{color: color}}>Talle: {producto.talle}</p>
           </div>
         </div>
         <div className="col">
@@ -39,10 +43,8 @@ function CardZapCarrito({ producto }) {
               className="btn btn-secondary btn-sm mt-2"
               onClick={() => deleteProducto(producto._id)}
             >
-              {" "}
               <span>
-                {" "}
-                <BsTrash3 />
+              <TachoBasura />
               </span>
               Quitar
             </button>

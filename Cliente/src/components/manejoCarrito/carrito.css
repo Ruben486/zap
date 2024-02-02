@@ -1,11 +1,11 @@
 .lienzo-carrito {
-padding-bottom: 40px;
-  
+  height: 100%;
+  padding-bottom: 40px;
 }
 .caja-externa {
   max-width: 800px;
   border-radius: 10px;
-  padding: 10px; 
+  padding: 10px;
 }
 .detalle-car-precio {
   padding: 10px;
@@ -13,4 +13,3 @@ padding-bottom: 40px;
   font-weight: bold;
   text-align: end;
 }
-

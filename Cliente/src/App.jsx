@@ -8,10 +8,13 @@ import Navegacion from "./pages/navbar/Navegacion";
 import VentanaModal from "./components/modal/VentanaModal";
 import LinkCarrito from "./components/linkcarrito/LinkCarrito";
 import Hero from "./pages/hero/Hero";
+import { ThemeProvider } from "./contextoTema/ContextoTema";
 
 function App() {
+  
   return (
     <CartGlobalProvider>
+      <ThemeProvider >
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing />}>
@@ -25,6 +28,7 @@ function App() {
           <Route path="/carrito" element={<DetalleCarrito />} />
         </Routes>
       </BrowserRouter>
+      </ThemeProvider >
     </CartGlobalProvider>
   );
 }

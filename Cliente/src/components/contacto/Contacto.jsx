@@ -1,13 +1,17 @@
 import "./Contacto.css";
 import Logo from "../../ui/logo";
-import { useState, useRef } from "react";
-import NavRetorno from "../retorno/NavRetorno";
+import { useState, useRef, useContext } from "react";
 import emailjs from "@emailjs/browser";
+import { themeContext } from "../../contextoTema/ContextoTema";
 
 const Contacto = () => {
   const [done, setDone] = useState(false);
   const form = useRef();
-
+  const tema = useContext(themeContext);
+  const darkMode = tema.state.darkMode;
+  const color = tema.state.color;
+  const fondo = tema.state.fondo;
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     emailjs
@@ -31,35 +35,52 @@ const Contacto = () => {
   return (
     <div className="container contacto" id="contacto">
       <div className="box-contacto">
-        {/* <section className="c-navegacion">
-        <NavRetorno />
-        </section> */}
         <section className="c-izq-side">
           <h5 className="c-titulo">Envianos tus comentarios</h5>
           <div className="c-imagen">
             <Logo ancho={120} alto={120} />
           </div>
         </section>
-        <section className="c-der-side">
-          <form ref= {form} action="" onSubmit={handleSubmit}>
+        <section
+          className="c-der-side"
+          style={{
+            background: fondo }}
+        >
+          <form
+            ref={form}
+            action=""
+            onSubmit={handleSubmit}
+            style={{ background: darkMode ? null : "whitesmoke" }}
+          >
             <fieldset className="mb-3">
-              <label htmlFor="user_name" className="form-label">
+              <label
+                htmlFor="user_name"
+                className="form-label"
+                style={{color:color}}
+              >
                 Nombre
               </label>
               <input
+                style={{color: color}}
                 type="text"
                 className="form-control"
                 name="user_name"
                 id="user_name"
                 placeholder="Nombre"
                 required
+                
               />
             </fieldset>
             <fieldset className="mb-3">
-              <label htmlFor="user_email" className="form-label">
+              <label
+                htmlFor="user_email"
+                className="form-label"
+                style={{color: color}}
+              >
                 Correo
               </label>
               <input
+                style={{color: color}}
                 type="email"
                 className="form-control"
                 name="user_email"
@@ -69,10 +90,15 @@ const Contacto = () => {
               />
             </fieldset>
             <fieldset className="mb-3">
-              <label htmlFor="user-message" className="form-label">
+              <label
+                htmlFor="user-message"
+                className="form-label"
+                style={{color: color}}
+              >
                 Mensaje
               </label>
               <textarea
+              style={{color: color}}
                 type="textarea"
                 name="user_message"
                 id="user_message"
