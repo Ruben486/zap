@@ -2,6 +2,7 @@
   margin-top: 2rem;
   margin-bottom: 2rem;
   padding-top: 2rem;
+  font-size: 1rem;
   font-family: 'Liberation Sans', sans-serif;
 }
 
@@ -53,7 +54,7 @@
 }
 
 .c-der-side {
-  width: 35rem;
+  width: 70%;
   padding: 1rem;
   border-radius: 2rem;
   box-shadow: 12px 12px 23px 7px rgba(0,0,0,0.3);
@@ -78,7 +79,7 @@ form {
 
 .c-button:hover {
   background: var(--bg-btn-hover);
-  border-radius: 12px;
+  border-radius: 10px;
   transition: all ease-in-out 0.2s;
 }
 
@@ -86,4 +87,13 @@ form {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .contacto {
+    width: 70%;
+  }
+  .box-contacto {
+    flex-direction: column;
+  }
 }

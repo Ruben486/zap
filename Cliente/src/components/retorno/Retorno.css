@@ -29,3 +29,11 @@
   cursor: pointer;
   color: var(--color-gra-2)
 }
+@media (max-width: 576px) 
+{
+  .r-navbar {
+    width: 5%;
+    padding: 10px;
+
+  }
+}

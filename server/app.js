@@ -14,10 +14,10 @@ const app = express()
 // configuracion
 app.use(morgan('dev'));
 app.use(express.json());
-/* app.use(cors({
+ app.use(cors({
   credentials: false,
   origin: "*"
-})); */
+})); 
 
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -30,13 +30,13 @@ app.use(bodyParser.json());
 
 //middlewares
 // cors
- app.use((req,res,next) => {
-  res.append('Access-Control-Allow-Origin', ['*']);
-  res.append('Access-Control-Allow-Credentials', true);
-  res.append('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE')
-  res.append('Access-Control-Allow-Headers', 'Content-Type')
-  next()
-}) 
+//  app.use((req,res,next) => {
+//   res.append('Access-Control-Allow-Origin', ['*']);
+//   res.append('Access-Control-Allow-Credentials', true);
+//   res.append('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE')
+//   res.append('Access-Control-Allow-Headers', 'Content-Type')
+//   next()
+// }) 
 
 
 // Routes

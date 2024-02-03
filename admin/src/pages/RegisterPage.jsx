@@ -41,6 +41,7 @@ function RegisterPage() {
   
   const submitForm = (data) => {
     signup(data)
+    console.log(loginErrors)
     reset(initialValue)
   };
 

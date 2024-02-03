@@ -1,6 +1,6 @@
 /* seccion de Productos */
 .productos {
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 .browse-zap-box {
@@ -15,10 +15,15 @@
   font-family: var(--font-family-serif);
   font-weight: bold;
   font-size: 40px;
-  text-transform: uppercase;
+  
   background: var(--grdte-tit-lista);
   background-clip: text;
   -webkit-background-clop: text;
   -webkit-text-fill-color: transparent;
   
+}
+@media (max-width: 768px) {
+  .productos {
+    width: 80%;
+  }
 }

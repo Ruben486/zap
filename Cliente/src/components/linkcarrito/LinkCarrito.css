@@ -1,10 +1,10 @@
 /* trabajo sobre el carrito */
 .div-carrito {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   position: fixed;
   top: 3px;
-  right: 10px;
+  right: 8px;
   transition: color ease-in-out 0.5s;
   z-index: 20;
 }
@@ -13,9 +13,9 @@
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   padding: 5px;
-  font-size: 40px;
+  font-size: 30px;
   line-height: 1rem;
   transition: color ease-in-out 0.2s;
 }
@@ -23,10 +23,10 @@
   position: absolute;
   top: 1px;
   right: 8px;
-  font-size: 20px;
-  font-weight: 800;
-  width: 30px;
-  height: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  width: 22px;
+  height: 22px;
   background-color: red;
   border-radius: 50%;
   text-align: center;

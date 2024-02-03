@@ -10,8 +10,8 @@
 .detalle-zap {
   font-family: var(--font-family);
   padding: 20px;
-  
 }  
+
 .detalle-zap-claro {  
   background: linear-gradient(60deg,#f6e4dc 40%, #d6f1f3 60%);
   background: -webkit-linear-gradient(1050px,#f6e4dc 40%, #d6f1f3 60%);

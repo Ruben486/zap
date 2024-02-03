@@ -11,6 +11,7 @@ import { BsHandThumbsUp } from "react-icons/bs";
 import { FcLike } from "react-icons/fc";
 import { BsTrash3 } from "react-icons/bs";
 import { GoHome } from "react-icons/go";
+import { BsCart3 } from "react-icons/bs";
 
 export const Correo = () => {
   return <SlEnvolope />;
@@ -62,4 +63,6 @@ export const TachoBasura = () => {
 export const Home = () => {
   return ( <GoHome />)
 } 
-
+export const Carrito = () => {
+  return (<BsCart3 />)
+}

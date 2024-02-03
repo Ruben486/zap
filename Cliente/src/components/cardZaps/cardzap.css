@@ -1,6 +1,5 @@
 .card-zap { 
   transition: all 0.5s ease-in-out;
-  border: none;
 }
 
 .card-zap:hover {
@@ -51,4 +50,7 @@
 }
 .c-saludo {
   color: red;
+}
+@media (max-width: 576px) {
+  
 }

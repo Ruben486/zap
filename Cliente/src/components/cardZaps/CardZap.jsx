@@ -16,11 +16,8 @@ const CardZap = ({ producto }) => {
   const { addProducto } = useContext(CartGlobalContext);
   const tema = useContext(themeContext);
   const darkMode = tema.state.darkMode;
-  const estilos = {
-    colorTexto: {
-      color: darkMode ? 'var(--color-claro)' : 'var(--color-oscuro)'
-    },
-  }; 
+  const color = tema.state.color;
+ 
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -52,17 +49,19 @@ const CardZap = ({ producto }) => {
 
   return (
     <div ref={ref} className="main col-md-4 mb-5 ">
-      <div className="h-100 p-2 mb-2 rounded d-flex flex-column card-zap"
+      <div className="card h-100 p-2 mb-2 rounded d-flex flex-column card-zap"
       style={{background: darkMode ? 'var(--bg-dark-card)' : 'var(--gradiente-card)' }}
       >
+        <div className="card-img-top imagen-card">
         <LazyLoadImage effect="blur" src={producto.img.url} width={"100%"}/>
+        </div>
         <div className="text-center" >
-          <h6 className="display-6 fs-5 mt-3" style={estilos.colorTexto}>
+          <h6 className="display-6 fs-5 mt-3" style={{color: color}}>
             {producto.nombre}
           </h6>
-          <p className="precio display-5" style={estilos.colorTexto}>
+          <p className="precio display-5" style={{color: color}}>
             $ {producto.precio} </p>
-          <p className="fs-6 mt-2" style={estilos.colorTexto}>
+          <p className="fs-6 mt-2" style={{color: color}}>
             {producto.descripcion}</p>
         </div>
         <div className="d-flex justify-content-between botones-card">
@@ -84,11 +83,11 @@ const CardZap = ({ producto }) => {
         <div className="d-flex justify-content-between mt-3 align-items-end py-1">
           <p>
             <Corazon />
-            <span className="like-counts" style={estilos.colorTexto}>
+            <span className="like-counts" style={{color: color}}>
               {likes}
             </span>
           </p>
-          <p style={estilos.colorTexto}>
+          <p style={{color: color}}>
             <Ojo />
             {" "}
             <span className="views-count"> {producto.vistas} </span>

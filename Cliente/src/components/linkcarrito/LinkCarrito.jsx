@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from "react";
-import { BsCart3 } from "react-icons/bs";
 import { CartGlobalContext } from "../../cartContext/GlobalContext";
 import { Link } from "react-router-dom";
 import constantes from "../../constantes/constantes";
 import "./LinkCarrito.css";
 import { themeContext } from "../../contextoTema/ContextoTema";
+import { Carrito } from "../../ui/reactIcons/ReactIcons";
 
 const LinkCarrito = () => {
   const { cart } = useContext(CartGlobalContext);
@@ -38,8 +38,7 @@ const LinkCarrito = () => {
     <>
       <div className={`div-carrito float-end shadow rounded-circle m-2 px-2 ${back}`} >
         <Link className="link-carrito" style= {{ color: colorIconCarrito}} to="/carrito" >
-          <BsCart3 />
-
+          <Carrito />
           {cart.length > 0 && (
             <div className="cant-items-carrito">
               {cart.length}

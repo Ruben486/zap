@@ -3,10 +3,9 @@ import { BsChevronBarUp } from "react-icons/bs";
 import { SlEnvelopeOpen } from "react-icons/sl";
 import { SlArrowDown } from "react-icons/sl";
 import { SlGrid } from "react-icons/sl";
-import { useState } from "react";
-import "./Retorno.css";
-import { useContext } from "react";
+import { useState, useContext } from "react";
 import { themeContext } from "../../contextoTema/ContextoTema";
+import "./Retorno.css";
 
 const NavRetorno = () => {
   const tema = useContext(themeContext);
