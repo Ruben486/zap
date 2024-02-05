@@ -41,7 +41,8 @@
   --font-size-medium: 24px;
   --font-size-small: 16px;
   --tiza:rgb(153, 148, 148);
-}
+}  
+
 
 body {
   font-family: "Poppins", "Montserrat", sans-serif;
@@ -95,4 +96,24 @@ body {
   padding: 9px 14px;
   font-size: 20px;
   border-radius: 10px;
+}
+a {
+  text-decoration: none; 
+  color: var(--color-claro);
+}
+
+li {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.enlaces {
+text-decoration: none;
+color: var(--color-claro);
+}
+
+@media (max-width:764px) {
+  body {
+    font-size: 0.6rem;
+  }
 }

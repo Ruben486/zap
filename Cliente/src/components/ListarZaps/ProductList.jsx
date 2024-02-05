@@ -52,7 +52,7 @@ function ProductList() {
         </h4>
       <section className="container browse-zap-box" >
         
-        <div className="row g-2 row-cols-12 row-cols-md-4 justify-content-center">
+        <div className="row row-cols-12 row-cols-md-2 g-2 justify-content-center">
           {productos?.map(
             (producto) =>
               producto.stock > 0 && (

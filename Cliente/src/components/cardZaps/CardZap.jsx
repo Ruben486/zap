@@ -55,7 +55,7 @@ const CardZap = ({ producto }) => {
         <div className="card-img-top imagen-card">
         <LazyLoadImage effect="blur" src={producto.img.url} width={"100%"}/>
         </div>
-        <div className="text-center" >
+        <div className="cuerpo-card text-center" >
           <h6 className="display-6 fs-5 mt-3" style={{color: color}}>
             {producto.nombre}
           </h6>

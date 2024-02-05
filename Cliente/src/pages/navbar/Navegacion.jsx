@@ -2,42 +2,88 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Logo from "../../ui/logo";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CartGlobalContext } from "../../cartContext/GlobalContext";
 import Toggle from "../../components/toggle/Toggle";
+import { Hamburguesa, XCerrar } from "../../ui/reactIcons/ReactIcons";
+import { Link } from "react-router-dom";
+import useScreenSize from "../../hooks/useScreenSizes";
 import "./navegacion.css";
 
 const Navegacion = () => {
-  const { activarModal } = useContext(CartGlobalContext);
-  return (
-    <nav data-bs-theme="dark" className="navbar nav-bar" id="navmenu">
-      <Container>
-        <Navbar.Brand className="navbrand" href="#home">
-          <Logo ancho={70} alto={70} /> Zap Calzados
-        </Navbar.Brand>
-        <button onClick={activarModal}>Modal</button>
-        <div className="toggle">
-          <Toggle />
-        
-        </div>
-        <Nav className="me-2">
-          <Nav.Link className="nav-link" href="#home">
-            Home
-          </Nav.Link>
-          <Nav.Link className="nav-link" href="#productos">
-            Productos
-          </Nav.Link>
-          <Nav.Link className="nav-link" href="#contacto">
-            Contacto
-          </Nav.Link>
+  const { width, height } = useScreenSize();
 
-          <Nav.Link className="nav-link" href="#Login">
-            Iniciar{" "}
-          </Nav.Link>
-          <Nav.Link className="nav-link" href="#register">
-            Registro{" "}
-          </Nav.Link>
-        </Nav>
+  const [hamburguesa, setHamburguesa] = useState(false);
+  const [verMenu, setVerMenu] = useState(false);
+
+  const { activarModal } = useContext(CartGlobalContext);
+  
+  const toggleMenu = (e) => {
+    setVerMenu((previo) => !previo);
+  };
+
+  const noPropagar = (e) => {
+    e.stopPropagation()
+  }
+
+  useEffect(() => {
+    width <= 768 ? setHamburguesa(true) : setHamburguesa(false);
+  }, [width]);
+
+  /* barra menu de items  como componente */
+  const ItemsMenu = () => {
+    return (
+      <ul className={`menu-items ${hamburguesa ? 'menu-vertical': null}`}>
+        <li className="item-lista">
+          <a className="nav-link enlaces" href={"#home"} onClick={noPropagar}>
+            Home
+          </a>
+        </li >
+        <li className="item-lista">
+        <a className="nav-link enlaces" href={"#productos"} onClick={noPropagar}>
+          Productos
+        </a>
+        </li>
+        <li className="item-lista">
+          <a className="nav-link enlaces" href="#contacto" onClick={noPropagar}>
+            Contacto
+          </a>
+        </li>
+      </ul>
+      
+    );
+  };
+  /* componente barra de menu  */
+  return (
+    <nav className="nav-bar py-2" id="navmenu">
+      <Container>
+        <section className="barra-menu">
+          <div className="s-izquierdo">
+            <Link className="enlaces navbrand" href="#home">
+              <Logo ancho={70} alto={70} /> Zap Calzados
+            </Link>
+            {/* <button onClick={activarModal}>Modal</button> */}
+            <div className="toggle">
+              <Toggle />
+            </div>
+          </div>
+          <div className="s-derecho">
+            {!hamburguesa ? (
+              <ItemsMenu />
+            ) : (
+              <a className="enlaces hamburguesa" onClick={toggleMenu}>
+                {verMenu ? (
+                  <>
+                    <XCerrar />
+                    <ItemsMenu />
+                  </>
+                ) : (
+                  <Hamburguesa />
+                )}
+              </a>
+            )}
+          </div>
+        </section>
       </Container>
     </nav>
   );

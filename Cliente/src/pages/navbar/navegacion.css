@@ -1,26 +1,70 @@
-.nav-bar {
-    /* background-color: #092735; */
+.nav-bar {  
     background: var(--bg-principal);
-    color: white;
+    color: var(--color-claro);
+    font-size: 16px;
   }
+
   .navbrand {
-    color: white;
-    font-size: 30px;
+    font-size: 1.3rem;
   }
   .navbrand:hover {
     color: orange;
     border-radius: 20px;
   }
+  .barra-menu {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .s-izquierdo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  .s-derecho {
+    justify-content: end;
+    flex:1;
+    display: flex;
+    position: relative;
+  }
+
+  .menu-items {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+  }
   
+  .menu-vertical {
+    position: absolute;
+    top: 60px;
+    flex-direction: column;
+    justify-content: left; 
+    align-items:start;
+    gap: 1rem;
+    background: var(--bg-principal);
+    border-radius: 8px;
+    z-index: 2;
+    padding: 5px;
+   
+  }
+  .item-lista {
+    text-align: center;
+    width: 100%;
+  }
+
   .nav-bar .nav-link {
+    color: var(--color-claro);
     text-decoration: none;
-    color: white;
     padding: 10px;
-    margin-left: 20px;
   }
   
   .nav-bar .nav-link:hover {
-    color: white;
+    color: var(--color-claro);
     background-color: orange;
     border-radius: 8px;
   }
@@ -29,4 +73,6 @@
     display:flex;
     justify-content: space-around;
   }
-  
+  .hamburguesa:hover {
+    color: var(--color-gra-1);
+  }

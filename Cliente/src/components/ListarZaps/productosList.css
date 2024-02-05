@@ -9,21 +9,22 @@
   gap: 1rem;
   justify-content: space-between;
 }
+.fila-cards {
+  display: flex;
+  justify-content:center;
+  align-items:start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
 
 .titulo-listado-zap {
   margin-top: 3rem;
   font-family: var(--font-family-serif);
   font-weight: bold;
   font-size: 40px;
-  
   background: var(--grdte-tit-lista);
   background-clip: text;
   -webkit-background-clop: text;
   -webkit-text-fill-color: transparent;
   
-}
-@media (max-width: 768px) {
-  .productos {
-    width: 80%;
-  }
 }

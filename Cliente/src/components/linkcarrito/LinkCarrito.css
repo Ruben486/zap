@@ -1,12 +1,12 @@
 /* trabajo sobre el carrito */
 .div-carrito {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   position: fixed;
   top: 3px;
-  right: 8px;
+  right: 10px;
   transition: color ease-in-out 0.5s;
-  z-index: 20;
+  z-index: 4;
 }
 .link-carrito {
   text-decoration: none;
@@ -19,6 +19,7 @@
   line-height: 1rem;
   transition: color ease-in-out 0.2s;
 }
+
 .cant-items-carrito {
   position: absolute;
   top: 1px;
