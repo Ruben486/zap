@@ -1,12 +1,20 @@
 import { createContext, useReducer } from "react";
 
 export const themeContext = createContext();
-
-const initialState = {
+const temaOs = window.matchMedia('(prefers-color-scheme: dark)').matches;
+console.log(temaOs);
+const initialState = temaOs
+ ? {
+    darkMode:  true,
+    lienzo: 'var(--bg-dark)',
+    fondo: 'var(--bg-dark-card)',
+    color: 'var(--color-claro)'    
+ }
+ : {
     darkMode: false,
     lienzo: 'var(--bg-claro)',
     fondo: 'var(--bg-claro)',
-    color: 'black'
+    color: '#242424'
 };
 /* para fondo oscuro tomar fondo: var(--color-bg) color: var(--color-claro)*/
 const themeReducer = (state,action) => {

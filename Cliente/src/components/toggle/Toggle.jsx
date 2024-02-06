@@ -10,6 +10,7 @@ const Toggle = () => {
   const handleClickToggle = () => {
     tema.dispatch({type:'toggle'})
   }
+  
   return (
     <div className="box-toggle" onClick={handleClickToggle}>
       <Sol />
