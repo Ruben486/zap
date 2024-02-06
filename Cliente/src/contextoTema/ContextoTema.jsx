@@ -6,7 +6,7 @@ console.log(temaOs);
 const initialState = temaOs
  ? {
     darkMode:  true,
-    lienzo: 'var(--bg-dark)',
+    lienzo: 'var(--color-bg)',
     fondo: 'var(--bg-dark-card)',
     color: 'var(--color-claro)'    
  }
