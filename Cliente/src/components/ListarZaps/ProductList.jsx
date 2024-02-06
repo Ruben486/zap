@@ -12,7 +12,6 @@ function ProductList() {
     isLoading,
     error,
     isFetching,
-    isUninitialized,
   } = useGetProductosQuery(undefined, {
     // refetchOnMountOrArgChange: true,
     // refetchOnFocus: true,
@@ -42,6 +41,7 @@ function ProductList() {
     return (
       <section className="alert alert-danger">
         Error al cargar los productos: {error.error}
+        console.log(data)
       </section>
     );
   }

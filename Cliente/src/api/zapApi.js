@@ -2,8 +2,10 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { API_URL } from "../config/server.js";
 
 export const zapApi = createApi({
+  
   reducerPath: "zapApi",
   baseQuery: fetchBaseQuery({baseUrl: API_URL}),
+
   refetchOnMountOrArgChange: true,
   //refetchOnFocus: true,
   //refetchOnReconnect: true, 
@@ -28,4 +30,5 @@ export const zapApi = createApi({
     }),
   }),
 });
+console.log(API_URL)
 export const { useGetProductosQuery, useModifyZapMutation,useGetZapaQuery } = zapApi;
