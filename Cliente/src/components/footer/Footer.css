@@ -11,7 +11,7 @@
   font-size: 1.2rem;
   color: var(--tiza);
   height: auto;
-  background-image: url("img/wave.svg"); 
+  background-image: url("/img/wave.svg"); 
   background-repeat: no-repeat;
   background-attachment: local;
   background-size:cover; 
