@@ -1,6 +1,4 @@
 import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
 import Logo from "../../ui/logo";
 import { useContext, useEffect, useState } from "react";
 import { CartGlobalContext } from "../../cartContext/GlobalContext";
@@ -25,7 +23,9 @@ const Navegacion = () => {
   const noPropagar = (e) => {
     e.stopPropagation()
   }
-
+  
+  
+  
   useEffect(() => {
     width <= 768 ? setHamburguesa(true) : setHamburguesa(false);
   }, [width]);
