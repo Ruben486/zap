@@ -8,27 +8,23 @@ import Navegacion from "./pages/navbar/Navegacion";
 import VentanaModal from "./components/modal/VentanaModal";
 import LinkCarrito from "./components/linkcarrito/LinkCarrito";
 import Hero from "./pages/hero/Hero";
-import { ThemeProvider } from "./contextoTema/ContextoTema";
 
 function App() {
-  
   return (
     <CartGlobalProvider>
-      <ThemeProvider >
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing />}>
             <Route path="/navmenu" element={<Navegacion />} />
             <Route path="/linkcarrito" element={<LinkCarrito />} />
             <Route path="/modal" element={<VentanaModal />} />
-            <Route path="/hero" element={<Hero /> } />
+            <Route path="/hero" element={<Hero />} />
           </Route>
           <Route path="/observer" element={<InterObserver />} />
           <Route path="/detallezap/:zapId" element={<DetalleZap />} />
           <Route path="/carrito" element={<DetalleCarrito />} />
         </Routes>
       </BrowserRouter>
-      </ThemeProvider >
     </CartGlobalProvider>
   );
 }

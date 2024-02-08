@@ -20,23 +20,16 @@ const Footer = () => {
             <span>
               <Foco />
             </span>{" "}
-            Semantic Developer
+            Sinapsis Developments
           </p>
         </div>
         <div className="d-panel">
           <p>
             {" "}
             <span>
-              <Telefono />
-            </span>{" "}
-            Whatsapp +54 9 362 4 56 2118
-          </p>
-          <p>
-            {" "}
-            <span>
               <Correo />
             </span>{" "}
-            arubensanchezg@gmail.com
+            sinapsisdev@gmail.com
           </p>
           <Link to="https://linkedin.com/in/ruben-sanchez-bb6427215">
             <p>

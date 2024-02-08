@@ -28,15 +28,16 @@
   gap: 3rem;
   
 }
+.i-panel *:hover {
+  color: var(--color-gra-2);
+  cursor: pointer;  
+}
 
 .d-panel *:hover {
   color: var(--color-gra-1);
   cursor: pointer;
 }
-.developer:hover {
-  color:#ec8c0d;
-  cursor: pointer;
-}
+
 .footer a, Link {
   text-decoration: none;
   color: var(--tiza);

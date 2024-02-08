@@ -2,7 +2,6 @@ import { createContext, useReducer } from "react";
 
 export const themeContext = createContext();
 const temaOs = window.matchMedia('(prefers-color-scheme: dark)').matches;
-console.log(temaOs);
 const initialState = temaOs
  ? {
     darkMode:  true,

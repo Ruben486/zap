@@ -4,7 +4,7 @@ import "./LoaderBarras.css";
 
 const LoaderBarras = () => {
   const tema = useContext(themeContext);
-  const fondo = tema.state.fondo;
+  const fondo = tema.state.fondo
 
   return (
     <div className="loading" style={{fondo}}>
