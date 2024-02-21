@@ -26,7 +26,9 @@ function HomePage() {
         <GetStarted />
       )}
       <h2
-        className="text-center text-6xl md:text-7xl font-bold text-transparent  m-30 p-4 rounded-lg bg-clip-text bg-gradient-to-b from-teal-300 via-cyan-600 to-blue-800
+        className="text-center text-6xl md:text-7xl font-bold text-transparent 
+         m-30 p-4 rounded-lg bg-clip-text
+         bg-gradient-to-b from-teal-300 via-cyan-600 to-blue-800
     animate-fade-down hover:animate-jump "
       >
         Home Page

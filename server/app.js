@@ -9,8 +9,9 @@ const productRoutes = require("./routes/productRoutes");
 const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes");
 const orderRoutes = require("./routes/orderRoutes");
+const { default: helmet } = require('helmet');
 const app = express()
-
+app.use(helmet())
 // configuracion
 app.use(morgan('dev'));
 app.use(express.json());
@@ -18,7 +19,7 @@ app.use(express.json());
   credentials: false,
   origin: "*"
 })); 
-
+app.use(express.json({ limit: '20kb' })); // limitar la cantiad de request de un mismo usuario
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(fileupload({
