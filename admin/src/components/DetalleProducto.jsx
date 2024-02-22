@@ -1,6 +1,7 @@
 import TdZapatilla from "./ui/TdZapatilla";
 import { useGlobal } from "../context/GlobalContext";
-import { Pencil, Trash } from "../components/ui/icons";
+import { Pencil, Trash } from "../ui/Iconos";
+
 const DetalleProducto = ({ producto }) => {
   const { modal, setModal, bajaProducto, setBajaProducto } = useGlobal();
   return (

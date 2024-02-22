@@ -53,7 +53,9 @@ const CardZap = ({ producto }) => {
       style={{background: darkMode ? 'var(--bg-dark-card)' : 'var(--gradiente-card)' }}
       >
         <div className="card-img-top imagen-card">
-        <LazyLoadImage effect="blur" src={producto.img.url} width={"100%"}/>
+        <LazyLoadImage effect="black-and-white" src={producto.img.url} width={"100%"} alt={producto.nombre} useIntersectionObserver 
+        threshold='50'
+         placeholderSrc={producto.nombre} />
         </div>
         <div className="cuerpo-card text-center" >
           <h6 className="display-6 fs-5 mt-3" style={{color: color}}>

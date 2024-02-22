@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { PlusSvg } from "../components/ui/icons";
+import { PlusSvg } from "../ui/Iconos";
 import { useGlobal } from "../context/GlobalContext";
 import InfiniteQueryZap from "./InfiniteQuery.zap";
 import TablaZap from "./Tabla.zap";

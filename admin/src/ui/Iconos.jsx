@@ -1,3 +1,5 @@
+import { BsHouse } from "react-icons/bs";
+
 export const PlusSvg = ({ size }) => {
   return (
     <svg
@@ -90,4 +92,9 @@ export const Hamburguesa = () => {
       />
     </svg>
   );
+};
+export const Home = () => {
+  return  (
+    <BsHouse size={25} />
+  )
 };

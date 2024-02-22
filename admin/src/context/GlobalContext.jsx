@@ -12,6 +12,7 @@ export const GlobalProvider = ({children}) => {
     const [bajaProducto, setBajaProducto] = useState(false)
     const [vistaZap, setVistaZap] = useState('tabla')
     const [vistaUsu, setVistaUsu] = useState('tabla')
+    const [paginaActual, setPaginaActual] = useState(1)
     return (
         <GlobalContext.Provider value={{modal, setModal, bajaProducto,setBajaProducto,vistaZap, setVistaZap,vistaUsu,setVistaUsu}}>
             {children}

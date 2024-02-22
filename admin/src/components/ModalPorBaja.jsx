@@ -1,4 +1,4 @@
-import { XCierre,Trash } from "../components/ui/icons";
+import { XCierre,Trash } from "../ui/Iconos";
 import { useGlobal } from "../context/GlobalContext";
 
 const ModalBajaProducto = ({ producto, deleteProductoMutation }) => {

@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { API_URL } from "../config/server.js";
-
+console.log(API_URL)
 export const zapApi = createApi({
   
   reducerPath: "zapApi",
@@ -30,5 +30,4 @@ export const zapApi = createApi({
     }),
   }),
 });
-console.log(API_URL)
 export const { useGetProductosQuery, useModifyZapMutation,useGetZapaQuery } = zapApi;

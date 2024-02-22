@@ -1,7 +1,7 @@
 import { useQueryClient } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import {Pencil, Trash } from "../components/ui/icons";
+import {Pencil, Trash } from "../ui/Iconos";
 import { Spinner} from "../components/ui/Spinner"
 import CuerpoTablaDatos from "../components/ui/CuerpoTablaDatos";
 import { useGlobal } from "../context/GlobalContext";

@@ -1,8 +1,8 @@
 import { BotonLink, BotonLinkNoClick } from "./ui/Botones";
 import { Link, NavLink } from "react-router-dom";
 import { useAuth } from "../context/authContext";
-import { BsHouse } from "react-icons/bs";
-import { XCierre, Hamburguesa } from "../components/ui/icons";
+
+import { XCierre, Hamburguesa, Home } from "../ui/Iconos";
 import { useState } from "react";
 import estilos from "./ui/estilos";
 
@@ -27,7 +27,7 @@ function Navbar() {
               to={"/"}
               onClick={toggleMenu}
             >
-              <BsHouse size={25} />
+              < Home />
               <p className="text-sm">Home</p>
             </Link>
 
