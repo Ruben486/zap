@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
+import "react-lazy-load-image-component/src/effects/black-and-white.css";
 import { useModifyZapMutation } from "../../api/zapApi";
 import { useState, useEffect, useRef, useContext } from "react";
 import { CartGlobalContext } from "../../cartContext/GlobalContext";
@@ -17,7 +17,6 @@ const CardZap = ({ producto }) => {
   const tema = useContext(themeContext);
   const darkMode = tema.state.darkMode;
   const color = tema.state.color;
- 
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -49,31 +48,41 @@ const CardZap = ({ producto }) => {
 
   return (
     <div ref={ref} className="main col-md-4 mb-5 ">
-      <div className="card h-100 p-2 mb-2 rounded d-flex flex-column card-zap"
-      style={{background: darkMode ? 'var(--bg-dark-card)' : 'var(--gradiente-card)' }}
+      <div
+        className="card h-100 p-2 mb-2 rounded d-flex flex-column card-zap"
+        style={{
+          background: darkMode
+            ? "var(--bg-dark-card)"
+            : "var(--gradiente-card)",
+        }}
       >
         <div className="card-img-top imagen-card">
-        <LazyLoadImage effect="black-and-white" src={producto.img.url} width={"100%"} alt={producto.nombre} useIntersectionObserver 
-        threshold='50'
-         placeholderSrc={producto.nombre} />
+          <LazyLoadImage
+            effect="black-and-white"
+            src={producto.img.url}
+            width={"100%"}
+            alt = 'imagen zapatilla'
+            threshold = {300}
+            
+          />
         </div>
-        <div className="cuerpo-card text-center" >
-          <h6 className="display-6 fs-5 mt-3" style={{color: color}}>
+        <div className="cuerpo-card text-center">
+          <h6 className="display-6 fs-5 mt-3" style={{ color: color }}>
             {producto.nombre}
           </h6>
-          <p className="precio display-5" style={{color: color}}>
-            $ {producto.precio} </p>
-          <p className="fs-6 mt-2" style={{color: color}}>
-            {producto.descripcion}</p>
+          <p className="precio display-5" style={{ color: color }}>
+            $ {producto.precio}{" "}
+          </p>
+          <p className="fs-6 mt-2" style={{ color: color }}>
+            {producto.descripcion}
+          </p>
         </div>
         <div className="d-flex justify-content-between botones-card">
           <button
             className="button-card"
             onClick={() => sumarLike(producto._id)}
           >
-            <Like />
-            {" "}
-            Like
+            <Like /> Like
           </button>
           <Link to={`/detallezap/${producto._id}`} className="link-card">
             Detalle
@@ -85,14 +94,12 @@ const CardZap = ({ producto }) => {
         <div className="d-flex justify-content-between mt-3 align-items-end py-1">
           <p>
             <Corazon />
-            <span className="like-counts" style={{color: color}}>
+            <span className="like-counts" style={{ color: color }}>
               {likes}
             </span>
           </p>
-          <p style={{color: color}}>
-            <Ojo />
-            {" "}
-            <span className="views-count"> {producto.vistas} </span>
+          <p style={{ color: color }}>
+            <Ojo /> <span className="views-count"> {producto.vistas} </span>
           </p>
         </div>
       </div>

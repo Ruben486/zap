@@ -10,10 +10,13 @@ const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes");
 const orderRoutes = require("./routes/orderRoutes");
 const { default: helmet } = require('helmet');
+const apicache = require('apicache');
 
 
 
 const app = express()
+const cache = apicache.middleware;
+
 app.use(helmet())
 // configuracion
 app.use(morgan('dev'));
@@ -32,6 +35,7 @@ app.use(fileupload({
   tempFileDir: './upload'
 }));
 app.use(bodyParser.json());
+app.use(cache('1 minute'));
 
 //middlewares
 // cors

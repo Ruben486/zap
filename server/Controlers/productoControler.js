@@ -2,8 +2,8 @@ const Producto = require("../models/Producto.js");
 const { uploadImage, removeImage } = require("../libs/cloudinary.js");
 const fsExtra = require("fs-extra");
 const { cargarImg, sacarImagen } = require("../libs/imgCloudinary.js");
-const NodeCache = require("node-cache");
-const zapCache = new NodeCache({ stdTTL: 10, useClones: false });
+/* const NodeCache = require("node-cache");
+const zapCache = new NodeCache({ stdTTL: 100 }); */
 
 // *** funciones auxiliares     *** //
 const findProductoAndDeleteImg = async (id) => {
@@ -18,19 +18,27 @@ const findProductoAndDeleteImg = async (id) => {
 // Traer todos los productos
 const getProductos = async (req, res) => {
   try {
+    const productos = await Producto.find();
+    res.json(productos);
+  } catch (error) {
+    return res.sendStatus(500).json({ message: error.message });
+  }
+
+  /* try {
     if (zapCache.has("productos")) {
+      productosCache = zapCache.get("productos")
+      console.log(productosCache[0].img)
       console.log("desde cache");
-      res.json(zapCache.get("productos"));
+      res.json(productosCache);
+
     } else {
       const productos = await Producto.find();
-      // const productos = await Producto.paginate({},{limit, page});
-      console.log("desde db");
-      zapCache.set("productos", productos)
-      res.json(productos)
+      success = zapCache.set("productos", productos);
+      res.json(productos);
     }
   } catch (error) {
-     return res.sendStatus(500).json({ message: error.message });
-  }
+    return res.sendStatus(500).json({ message: error.message });
+  } */
 };
 
 const getProductosPaginacion = async (req, res) => {
