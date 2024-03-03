@@ -60,6 +60,7 @@ const InfiniteQueryZap = () => {
                   src={zapa.img.url}
                   alt=""
                   className="w-md max-h-80 rounded-md"
+                  loading="lazy"
                 />
                 <p className="text-sky-500 text-base md:text-1xl text-center p-1 mt-2 hover:text-red-500">
                   {zapa.nombre}

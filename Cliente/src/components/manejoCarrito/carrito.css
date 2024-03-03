@@ -4,8 +4,8 @@
 }
 .caja-externa {
   max-width: 800px;
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 8px;
+  padding: 8px;
 }
 .detalle-car-precio {
   padding: 10px;
@@ -13,3 +13,28 @@
   font-weight: bold;
   text-align: end;
 }
+.cart-det-zap  {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .8rem;
+  border: 1px solid rgba(179, 195, 197, 0.185);
+}
+.cart-det-txt-desc {
+  max-width: 260px;
+  overflow-x: auto;
+}
+.cart-det-img, .cart-dep-precio {
+  flex: 1;
+}
+
+.cart-dep-texto > * {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .cart-det-zap {
+    flex-direction: column;
+  }
+};

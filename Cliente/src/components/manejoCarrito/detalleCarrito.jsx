@@ -26,8 +26,8 @@ function DetalleCarrito() {
      >
       <CabezaPage titulo={"Detalle del carrito"} />
       <div
-        className="container caja-externa d-flex justify-content-center 
-      align-items-center flex-column shadow" 
+        className="container caja-externa d-flex justify-content-between 
+      align-items-center flex-column" 
       style={{ background: fondo}}
       >
         {cart?.map((producto) => (

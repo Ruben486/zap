@@ -7,6 +7,7 @@ import { Hamburguesa, XCerrar } from "../../ui/reactIcons/ReactIcons";
 import { Link } from "react-router-dom";
 import useScreenSize from "../../hooks/useScreenSizes";
 import "./navegacion.css";
+import LinkCarrito from "../../components/linkcarrito/LinkCarrito";
 
 const Navegacion = () => {
   const { width, height } = useScreenSize();
@@ -15,17 +16,15 @@ const Navegacion = () => {
   const [verMenu, setVerMenu] = useState(false);
 
   const { activarModal } = useContext(CartGlobalContext);
-  
+
   const toggleMenu = (e) => {
     setVerMenu((previo) => !previo);
   };
 
   const noPropagar = (e) => {
-    e.stopPropagation()
-  }
-  
-  
-  
+    e.stopPropagation();
+  };
+
   useEffect(() => {
     width <= 768 ? setHamburguesa(true) : setHamburguesa(false);
   }, [width]);
@@ -33,16 +32,20 @@ const Navegacion = () => {
   /* barra menu de items  como componente */
   const ItemsMenu = () => {
     return (
-      <ul className={`menu-items ${hamburguesa ? 'menu-vertical': null}`}>
+      <ul className={`menu-items ${hamburguesa ? "menu-vertical" : null}`}>
         <li className="item-lista">
           <a className="nav-link enlaces" href={"#home"} onClick={noPropagar}>
             Home
           </a>
-        </li >
+        </li>
         <li className="item-lista">
-        <a className="nav-link enlaces" href={"#productos"} onClick={noPropagar}>
-          Productos
-        </a>
+          <a
+            className="nav-link enlaces"
+            href={"#productos"}
+            onClick={noPropagar}
+          >
+            Productos
+          </a>
         </li>
         <li className="item-lista">
           <a className="nav-link enlaces" href="#contacto" onClick={noPropagar}>
@@ -50,7 +53,6 @@ const Navegacion = () => {
           </a>
         </li>
       </ul>
-      
     );
   };
   /* componente barra de menu  */
@@ -63,11 +65,11 @@ const Navegacion = () => {
               <Logo ancho={70} alto={70} /> Zap Calzados
             </Link>
             {/* <button onClick={activarModal}>Modal</button> */}
+          </div>
+          <div className="s-derecho">
             <div className="toggle">
               <Toggle />
             </div>
-          </div>
-          <div className="s-derecho">
             {!hamburguesa ? (
               <ItemsMenu />
             ) : (
@@ -82,6 +84,7 @@ const Navegacion = () => {
                 )}
               </a>
             )}
+            <LinkCarrito />
           </div>
         </section>
       </Container>

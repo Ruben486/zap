@@ -41,7 +41,6 @@ function ProductList() {
     return (
       <section className="alert alert-danger">
         Error al cargar los productos: {error.error}
-        console.log(data)
       </section>
     );
   }

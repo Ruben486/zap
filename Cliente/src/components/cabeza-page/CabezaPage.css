@@ -4,13 +4,33 @@
     position: sticky;
     top: 0;
     margin-bottom: 40px;
+    
   }
 
   .cabeza-titulo {
     font-weight: bold;
-    font-size: 40px;
+    font-size: 2rem;
     background: var(--gradiente-titulo);
     background-clip: text;
     -webkit-background-clop: text;
     -webkit-text-fill-color: transparent;
   }
+
+  .boton-retorno {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    background-color: var(--bg-btn-sec);
+    color: white;
+    border-radius: 8px;
+  }
+  
+  .boton-retorno:hover {
+    background: var(--bg-btn-hover);
+    color: white;
+  }
+@media (max-width: 760px) {
+  .cabeza-detalle {
+    flex-direction: column;
+  }
+};

@@ -2,12 +2,26 @@ import { createContext, useReducer } from "react";
 
 export const themeContext = createContext();
 const temaOs = window.matchMedia('(prefers-color-scheme: dark)').matches;
+let esMobile = false;
+
+if (navigator.userAgent.match(/Android/i) ||
+    navigator.userAgent.match(/webOS/i) ||
+    navigator.userAgent.match(/iPhone/i) || 
+    navigator.userAgent.match(/iPad/i) ||
+    navigator.userAgent.match(/iPod/i) ||
+    navigator.userAgent.match(/BlackBerry/i) ||
+    navigator.userAgent.match(/Windows Phone/i)) {
+    esMobile= true
+    }   
+    console.log(esMobile);
+    
 const initialState = temaOs
  ? {
     darkMode:  true,
     lienzo: 'var(--color-bg)',
     fondo: 'var(--bg-dark-card)',
-    color: 'var(--color-claro)'    
+    color: 'var(--color-claro)',
+    esDesktop: true,    
  }
  : {
     darkMode: false,

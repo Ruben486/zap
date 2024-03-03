@@ -28,19 +28,7 @@
 .detalle-texto {
   height: 80px;
 }
-.boton-retorno {
-  display: inline-block;
-  text-decoration: none;
-  padding: 10px;
-  background-color: var(--bg-btn-sec);
-  color: white;
-  border-radius: 8px;
-}
 
-.boton-retorno:hover {
-  background: var(--bg-btn-hover);
-  color: white;
-}
 
 .detalle-titulo {
   font-weight: bold;
