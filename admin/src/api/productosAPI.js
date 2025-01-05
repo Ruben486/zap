@@ -36,7 +36,7 @@ export const deleteProducto = async (id) => {
 
 export const actualizarProducto = async (newProducto) => {
    const res = await productosAPI.put(`/productos/${newProducto.id}`,newProducto,
-   {headers: {
+   {headers: {  
     "Content-Type": "multipart/form-data",
    }});
    return res

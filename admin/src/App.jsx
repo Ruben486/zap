@@ -8,7 +8,7 @@ import { GlobalProvider } from "./context/GlobalContext";
 import ProductosPage from "./pages/ProductosPage";
 import UsuariosPage from "./pages/UsuariosPage";
 import { ProtectorRuta } from "./components/RouteProtector";
-import toast, { Toaster } from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 import InfiniteQueryZap from "./pages/InfiniteQuery.zap";
 import TablaDeDatos from "./components/TablaDeDatos";
 import EditarProducto from "./components/EditarProducto";

@@ -31,11 +31,13 @@ const CardZap = ({ producto }) => {
 
   useEffect(() => {
     if (isIntersecting) {
-      ref.current.querySelectorAll(".card").forEach((el) => {
+      const refcurrent = ref.current.querySelectorAll("div")
+      
+      ref.current.querySelectorAll("div").forEach((el) => {
         el.classList.add("slide-in");
       });
     } else {
-      ref.current.querySelectorAll(".card").forEach((el) => {
+      ref.current.querySelectorAll("div").forEach((el) => {
         el.classList.remove("slide-in");
       });
     }
@@ -47,7 +49,7 @@ const CardZap = ({ producto }) => {
   };
 
   return (
-    <div ref={ref} className="main col-md-4 mb-5 ">
+    <div ref={ref} className="main col-md-4 mb-5">
       <div
         className="card h-100 p-2 mb-2 rounded d-flex flex-column card-zap"
         style={{
@@ -56,7 +58,7 @@ const CardZap = ({ producto }) => {
             : "var(--gradiente-card)",
         }}
       >
-        <div className="card-img-top imagen-card">
+        < section className="card-img-top imagen-card">
           <LazyLoadImage
             effect="black-and-white"
             src={producto.img.url}
@@ -65,8 +67,8 @@ const CardZap = ({ producto }) => {
             threshold = {300}
             
           />
-        </div>
-        <div className="cuerpo-card text-center">
+        </section>
+        <section className="cuerpo-card text-center">
           <h6 className="display-6 fs-5 mt-3" style={{ color: color }}>
             {producto.nombre}
           </h6>
@@ -76,8 +78,8 @@ const CardZap = ({ producto }) => {
           <p className="fs-6 mt-2" style={{ color: color }}>
             {producto.descripcion}
           </p>
-        </div>
-        <div className="d-flex justify-content-between botones-card">
+        </section>
+        <section className="d-flex justify-content-between botones-card">
           <button
             className="button-card"
             onClick={() => sumarLike(producto._id)}
@@ -90,8 +92,8 @@ const CardZap = ({ producto }) => {
           <button className="button-card" onClick={() => addProducto(producto)}>
             Agregar al carrito
           </button>
-        </div>
-        <div className="d-flex justify-content-between mt-3 align-items-end py-1">
+        </section>
+        <section className="d-flex justify-content-between mt-3 align-items-end py-1">
           <p>
             <Corazon />
             <span className="like-counts" style={{ color: color }}>
@@ -101,7 +103,7 @@ const CardZap = ({ producto }) => {
           <p style={{ color: color }}>
             <Ojo /> <span className="views-count"> {producto.vistas} </span>
           </p>
-        </div>
+        </section>
       </div>
     </div>
   );

@@ -46,7 +46,7 @@ main div:first-child {
   opacity: 0;
 }
 main div:nth-child(2) {
-  transform: translateY(-150%);
+  transform: translatex(-150%);
   opacity: 0;
 }
 

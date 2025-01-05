@@ -5,13 +5,13 @@ import { useAuth } from "../context/authContext";
 import { XCierre, Hamburguesa, Home } from "../ui/Iconos";
 import { useState } from "react";
 import estilos from "./ui/estilos";
-
+import { API_URL} from "../config/server"
 
 function Navbar() {
   const { user, logout } = useAuth();
   const [hamburguesa, setHamburguesa] = useState(true);
   const [verMenu, setVerMenu] = useState(false);
-
+  
   const toggleMenu = () => {
     setHamburguesa((prev) => !prev);
     setVerMenu((previo) => !previo);
@@ -74,8 +74,10 @@ function Navbar() {
     <header>
       <nav className="container relative flex text-sm md:text-base justify-between items-start md:items-center bg-neutral-700 py-2 px-4 rounded-md">
         <div>
-          <h1 className="text-2xl md:text-3xl md:bold">Panel de Admin</h1>
-          <h5> {user.username} </h5>
+          <h1 className="text-2xl md:text-3xl md:bold">
+            Panel de Admin
+          </h1>
+          <h5> {user.username}  { API_URL}</h5>
         </div>
         <div className="flex collapse md:visible justify-end items-center">
           <ul
