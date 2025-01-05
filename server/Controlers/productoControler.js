@@ -18,7 +18,7 @@ const findProductoAndDeleteImg = async (id) => {
 const getProductos =  async (req, res) => {
   try {
     const productosCache = serverCache.has("productos");
-    // if (productosCache) return res.send(serverCache.get("productos"));
+    if (productosCache) return res.send(serverCache.get("productos"))
     
     const productos = await Producto.find();
     const guardar = serverCache.set("productos",productos)
